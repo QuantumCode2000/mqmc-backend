@@ -5,17 +5,16 @@ import { QaModule } from './qa/qa.module';
 import { RolesModule } from './roles/roles.module';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
-
 @Module({
   imports: [
     PeoplesModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 3307,
-      username: 'user_crud',
+      port: 3306,
+      username: 'root',
       password: 'root',
-      database: 'db_crud',
+      database: 'mqmcdb',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
       autoLoadEntities: true,
